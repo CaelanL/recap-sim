@@ -1,0 +1,14 @@
+{
+  "name": "postgres-replica-lag redrive (SIMULATED chaos experiment)",
+  "seed": 21,
+  "duration_sim_minutes": 30,
+  "faults": [
+    {"type": "pg_replica_lag", "seconds": 120.0},
+    {"type": "partition", "edge": "processor->monolith", "start": 300.0, "end": 480.0}
+  ],
+  "invariants": [
+    "no_duplicate_adf_reports",
+    "no_duplicate_cc_notifications",
+    "dlq_drains_by_end_of_run"
+  ]
+}

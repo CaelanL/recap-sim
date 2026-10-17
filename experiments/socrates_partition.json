@@ -1,0 +1,13 @@
+{
+  "name": "socrates-gw-partition resilience (SIMULATED chaos experiment)",
+  "seed": 9,
+  "duration_sim_minutes": 20,
+  "faults": [
+    {"type": "partition", "edge": "download_chunks->socrates_gw", "start": 120.0, "end": 300.0}
+  ],
+  "invariants": [
+    "every_emitted_recap_has_a_report",
+    "no_duplicate_adf_reports",
+    "dlq_drains_by_end_of_run"
+  ]
+}

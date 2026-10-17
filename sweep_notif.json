@@ -1,0 +1,16 @@
+{
+  "hazard_after_notify_0.5pct_no_lag": {
+    "pct_dup_adf": 0.0,
+    "mean_dup_adf_per_affected": 0,
+    "pct_dup_notifications": 0.0,
+    "mean_dup_notif_per_affected": 0,
+    "pct_dup_analytics": 0.0
+  },
+  "hazard_after_notify_0.5pct_lag60": {
+    "pct_dup_adf": 93.5,
+    "mean_dup_adf_per_affected": 2.9,
+    "pct_dup_notifications": 93.5,
+    "mean_dup_notif_per_affected": 2.9,
+    "pct_dup_analytics": 0.0
+  }
+}

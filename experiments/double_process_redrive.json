@@ -1,0 +1,16 @@
+{
+  "name": "idempotency-check race mid-redrive (SIMULATED chaos experiment)",
+  "seed": 1337,
+  "duration_sim_minutes": 30,
+  "faults": [
+    {"type": "pg_replica_lag", "seconds": 90.0},
+    {"type": "worker_crash_after_write", "target": "group1", "times": 2},
+    {"type": "partition", "edge": "processor->monolith", "start": 240.0, "end": 420.0}
+  ],
+  "invariants": [
+    "no_duplicate_adf_reports",
+    "no_duplicate_cc_notifications",
+    "no_duplicate_analytic_events",
+    "dlq_drains_by_end_of_run"
+  ]
+}
